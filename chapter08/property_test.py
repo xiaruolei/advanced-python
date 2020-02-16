@@ -25,6 +25,9 @@ if __name__ == "__main__":
     user = User("Tom", date(year=2000, month=2, day=11))
     print(user.get_age())
 
+    print(user._name)
     print(user.name)
+
     user.name = "Jim"
+    print(user._name)
     print(user.name)
