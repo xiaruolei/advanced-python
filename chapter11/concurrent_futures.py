@@ -16,7 +16,7 @@ def get_html(times):
     return times
 
 
-# # 通过submit函数提交执行的函数到线程池中, submit 是立即返回
+# # 通过submit函数提交执行的函数到线程池中, submit是立即返回
 # executor = futures.ThreadPoolExecutor(max_workers=4)
 # task1 = executor.submit(get_html, 3)
 # task2 = executor.submit(get_html, 2)
