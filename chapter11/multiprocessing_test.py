@@ -18,19 +18,20 @@ def get_html(n):
     return n
 
 
-# 使用线程池
-pool = multiprocessing.Pool(multiprocessing.cpu_count())
+# # 使用线程池
+# pool = multiprocessing.Pool(multiprocessing.cpu_count())
 # result = pool.apply_async(get_html, args=(3,))
 #
-# #等待所有任务完成
+# # 不再接收新的任务
 # pool.close()
+# # 等待所有任务完成
 # pool.join()
 #
 # print(result.get())
 
 # imap
-# for result in pool.imap(get_html, [1,5,3]):
-#     print("{} sleep success".format(result))
+for result in pool.imap(get_html, [1,5,3]):
+    print("{} sleep success".format(result))
 
 for result in pool.imap_unordered(get_html, [1, 5, 3]):
     print("{} sleep success".format(result))
