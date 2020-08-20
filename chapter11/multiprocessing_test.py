@@ -29,6 +29,7 @@ def get_html(n):
 #
 # print(result.get())
 
+pool = multiprocessing.Pool(multiprocessing.cpu_count())
 # imap
 for result in pool.imap(get_html, [1,5,3]):
     print("{} sleep success".format(result))
